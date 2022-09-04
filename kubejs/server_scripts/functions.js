@@ -24,6 +24,7 @@ const getPreferredItemInTag = (tag) => {
             .sort(({ mod: a }, { mod: b }) => compareIndices(a, b, tag))[0] || Item.of(air);
     return pref;
 };
+
 const compareIndices = (a, b, tag) => {
     if (a == b) return 0; // iff a == b, they'll be found at the same position in modPriorities
 

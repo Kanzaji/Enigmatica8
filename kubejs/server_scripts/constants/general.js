@@ -18,23 +18,15 @@ const modPriorities = [
     'tconstruct',
     'botania',
     'quark',
-    'pedestals',
     'refinedstorage',
-    'mapperbase',
     'bloodmagic',
-    'eidolon',
     'morevanillalib',
     'titanium',
     'mythicbotany',
     'undergarden',
     'byg',
-    'atum',
-    'betterendforge',
-    'miniutilities',
     'chipped',
     'chisel',
-    'voluminousenergy',
-    'assemblylinemachines',
     'malum'
 ];
 
