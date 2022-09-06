@@ -310,12 +310,14 @@ onEvent('recipes', (event) => {
             .milling(outputs, input)
             .processingTime(processingTime)
             .id(`create:milling/${material}_ore`);
-
-        event.recipes.create // Raw Ore Milling
-            .milling(Item.of(primaryOutput), inputRaw)
-            .processingTime(processingTime)
-            .id(`create:milling/raw_${material}_ore`);
-
+    
+        if (raw_ore != air) {
+            event.recipes.create // Raw Ore Milling
+                .milling(Item.of(primaryOutput), inputRaw)
+                .processingTime(processingTime)
+                .id(`create:milling/raw_${material}_ore`);
+        }
+        
         // Crushing - Higher Rates
         primaryChance = 0.6;
         secondaryChance = 0.1;
@@ -335,11 +337,13 @@ onEvent('recipes', (event) => {
             .crushing(outputs, input)
             .processingTime(processingTime)
             .id(`create:crushing/${material}_ore`);
-        
-        event.recipes.create // Raw Ore Crushing
-            .crushing(outputsRaw, inputRaw)
-            .processingTime(processingTime)
-            .id(`create:crushing/raw_${material}_ore`);
+            
+        if (raw_ore != air) {
+            event.recipes.create // Raw Ore Crushing
+                .crushing(outputsRaw, inputRaw)
+                .processingTime(processingTime)
+                .id(`create:crushing/raw_${material}_ore`);
+        }
     }
 
     function create_gem_ore_processing(event, material, ore, gem, dust, shard) {
