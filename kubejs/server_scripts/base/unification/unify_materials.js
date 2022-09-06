@@ -34,10 +34,10 @@ onEvent('recipes', (event) => {
         // bloodmagic_gem_ore_processing(event, material, ore, gem, shard, dust); // Broken
         // bloodmagic_ingot_gem_crushing(event, material, ingot, dust, gem); // Broken
 
-        create_metal_ore_processing(event, material, ore, crushed_ore, ingot, nugget);
+        create_metal_ore_processing(event, material, ore, crushed_ore, ingot, nugget, raw_ore);
         create_gem_ore_processing(event, material, ore, gem, dust, shard);
-        // create_ingot_gem_milling(event, material, ingot, dust, gem);
-        // create_metal_block_processing(event, material, crushed_ore, ingot, nugget);
+        create_ingot_gem_milling(event, material, ingot, dust, gem);
+        create_metal_block_processing(event, material, crushed_ore, ingot, nugget);
 
         // emendatus_item_melting(event, material, ore, block, ingot, nugget, gem, dust, gear, rod, plate);
         // emendatus_hammer_crushing(event, material, ore, dust);
@@ -264,7 +264,7 @@ onEvent('recipes', (event) => {
             .id(`bloodmagic:arc/dustsfrom_${type}_${material}`);
     }
 
-    function create_metal_ore_processing(event, material, ore, crushed_ore, ingot, nugget) {
+    function create_metal_ore_processing(event, material, ore, crushed_ore, ingot, nugget, raw_ore) {
         if (ore == air || crushed_ore == air || ingot == air) {
             return;
         }
@@ -277,6 +277,9 @@ onEvent('recipes', (event) => {
             secondaryCount = 2,
             input = `#forge:ores/${material}`,
             materialProperties;
+            if (raw_ore != air) {
+                var inputRaw = `#forge:raw_materials/${material}`
+            }
 
         try {
             materialProperties = oreProcessingSecondaries[material];
@@ -293,6 +296,7 @@ onEvent('recipes', (event) => {
             secondaryOutput = crushed_ore;
             processingTime = 400;
         }
+
         // Milling - Lower rates
         var primaryChance = 0.25,
             secondaryChance = 0.05;
@@ -302,10 +306,15 @@ onEvent('recipes', (event) => {
             Item.of(secondaryOutput, secondaryCount).withChance(secondaryChance)
         ];
 
-        event.recipes.create
+        event.recipes.create // Ore Milling
             .milling(outputs, input)
             .processingTime(processingTime)
             .id(`create:milling/${material}_ore`);
+
+        event.recipes.create // Raw Ore Milling
+            .milling(Item.of(primaryOutput), inputRaw)
+            .processingTime(processingTime)
+            .id(`create:milling/raw_${material}_ore`);
 
         // Crushing - Higher Rates
         primaryChance = 0.6;
@@ -317,10 +326,20 @@ onEvent('recipes', (event) => {
             Item.of(stoneOutput).withChance(0.125)
         ];
 
-        event.recipes.create
+        var outputsRaw = [
+            Item.of(primaryOutput),
+            Item.of("create:experience_block")
+        ]
+
+        event.recipes.create // Ore Crushing
             .crushing(outputs, input)
             .processingTime(processingTime)
             .id(`create:crushing/${material}_ore`);
+        
+        event.recipes.create // Raw Ore Crushing
+            .crushing(outputsRaw, inputRaw)
+            .processingTime(processingTime)
+            .id(`create:crushing/raw_${material}_ore`);
     }
 
     function create_gem_ore_processing(event, material, ore, gem, dust, shard) {
