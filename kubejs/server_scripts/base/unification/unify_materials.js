@@ -2,6 +2,7 @@
 onEvent('recipes', (event) => {
     materialsToUnify.forEach((material) => {
         let ore = getPreferredItemInTag(Ingredient.of(`#forge:ores/${material}`)).id;
+        let raw_ore = getPreferredItemInTag(Ingredient.of(`#forge:raw_materials/${material}`)).id;
         let block = getPreferredItemInTag(Ingredient.of(`#forge:storage_blocks/${material}`)).id;
         let ingot = getPreferredItemInTag(Ingredient.of(`#forge:ingots/${material}`)).id;
         let nugget = getPreferredItemInTag(Ingredient.of(`#forge:nuggets/${material}`)).id;
@@ -9,7 +10,7 @@ onEvent('recipes', (event) => {
         let gem = getPreferredItemInTag(Ingredient.of(`#forge:gems/${material}`)).id;
         let chunk = getPreferredItemInTag(Ingredient.of(`#forge:chunks/${material}`)).id;
 
-        let crushed_ore = getPreferredItemInTag(Ingredient.of(`#create:crushed_ores/${material}`)).id;
+        let crushed_ore = getPreferredItemInTag(Ingredient.of(`#create:crushed_ores/${material}_ore`)).id;
         let dust = getPreferredItemInTag(Ingredient.of(`#forge:dusts/${material}`)).id;
         let shard = getPreferredItemInTag(Ingredient.of(`#forge:shards/${material}`)).id;
 
@@ -25,16 +26,16 @@ onEvent('recipes', (event) => {
         let rod = getPreferredItemInTag(Ingredient.of(`#forge:rods/${material}`)).id;
         let plate = getPreferredItemInTag(Ingredient.of(`#forge:plates/${material}`)).id;
 
-        // astralsorcery_ore_processing_infuser(event, material, ore, ingot, gem, shard);
+        // astralsorcery_ore_processing_infuser(event, material, ore, ingot, gem, shard); // Astral Sorcery isn't installed in E8
 
-        // betterend_alloys(event, material, ore, ingot);
+        // betterend_alloys(event, material, ore, ingot); // BetterEnd isn't installed in E8
 
-        // bloodmagic_metal_ore_processing(event, material, ore, fragment, gravel, dust, ingot);
-        // bloodmagic_gem_ore_processing(event, material, ore, gem, shard, dust);
-        // bloodmagic_ingot_gem_crushing(event, material, ingot, dust, gem);
+        // bloodmagic_metal_ore_processing(event, material, ore, fragment, gravel, dust, ingot); // Broken
+        // bloodmagic_gem_ore_processing(event, material, ore, gem, shard, dust); // Broken
+        // bloodmagic_ingot_gem_crushing(event, material, ingot, dust, gem); // Broken
 
-        // create_metal_ore_processing(event, material, ore, crushed_ore, ingot, nugget);
-        // create_gem_ore_processing(event, material, ore, gem, dust, shard);
+        create_metal_ore_processing(event, material, ore, crushed_ore, ingot, nugget);
+        create_gem_ore_processing(event, material, ore, gem, dust, shard);
         // create_ingot_gem_milling(event, material, ingot, dust, gem);
         // create_metal_block_processing(event, material, crushed_ore, ingot, nugget);
 
@@ -73,16 +74,16 @@ onEvent('recipes', (event) => {
         // pedestals_metal_ore_crushing(event, material, ore, ingot, dust);
         // pedestals_ingot_gem_crushing(event, material, ingot, dust, gem);
 
-        // thermal_metal_ore_pulverizing(event, material, ore, dust, ingot);
-        // thermal_gem_ore_pulverizing(event, material, ore, dust, gem, shard);
-        // thermal_ingot_gem_pulverizing(event, material, ingot, dust, gem);
-        // thermal_metal_casting(event, material, ingot, nugget, gear, rod, plate);
-        // thermal_metal_melting(event, material, block, ingot, nugget, gear, rod, plate);
-        // thermal_gem_casting(event, material, gem, gear, rod, plate);
-        // thermal_gem_melting(event, material, block, gem, gear, rod, plate);
+    //     thermal_metal_ore_pulverizing(event, material, ore, dust, ingot);
+    //     thermal_gem_ore_pulverizing(event, material, ore, dust, gem, shard);
+    //     thermal_ingot_gem_pulverizing(event, material, ingot, dust, gem);
+    //     thermal_metal_casting(event, material, ingot, nugget, gear, rod, plate);
+    //     thermal_metal_melting(event, material, block, ingot, nugget, gear, rod, plate);
+    //     thermal_gem_casting(event, material, gem, gear, rod, plate);
+    //     thermal_gem_melting(event, material, block, gem, gear, rod, plate);
 
-        // tconstruct_metal_casting(event, material, block, ingot, nugget, gear, rod, plate);
-        // tconstruct_gem_casting(event, material, block, gem, gear, rod, plate);
+    //     tconstruct_metal_casting(event, material, block, ingot, nugget, gear, rod, plate);
+    //     tconstruct_gem_casting(event, material, block, gem, gear, rod, plate);
     });
 
     function astralsorcery_ore_processing_infuser(event, material, ore, ingot, gem, shard) {
@@ -285,7 +286,7 @@ onEvent('recipes', (event) => {
 
         try {
             secondaryOutput = getPreferredItemInTag(
-                Ingredient.of(`#create:crushed_ores/${materialProperties.secondary}`)
+                Ingredient.of(`#create:crushed_ores/${materialProperties.secondary}_ore`)
             ).id;
             processingTime = materialProperties.createProcessingTime;
         } catch (err) {
@@ -300,6 +301,7 @@ onEvent('recipes', (event) => {
             Item.of(primaryOutput, primaryCount).withChance(primaryChance),
             Item.of(secondaryOutput, secondaryCount).withChance(secondaryChance)
         ];
+
         event.recipes.create
             .milling(outputs, input)
             .processingTime(processingTime)
@@ -314,6 +316,7 @@ onEvent('recipes', (event) => {
             Item.of(secondaryOutput, secondaryCount).withChance(secondaryChance),
             Item.of(stoneOutput).withChance(0.125)
         ];
+
         event.recipes.create
             .crushing(outputs, input)
             .processingTime(processingTime)
@@ -405,7 +408,7 @@ onEvent('recipes', (event) => {
 
         // Smelting and Blasting
         output = ingot;
-        input = `#create:crushed_ores/${material}`;
+        input = `#create:crushed_ores/${material}_ore`;
 
         event.blasting(output, input).xp(0.1).id(`create:blasting/${material}_ingot_from_crushed`);
         event.smelting(output, input).xp(0.1).id(`create:smelting/${material}_ingot_from_crushed`);
