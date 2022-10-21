@@ -1,3 +1,142 @@
+### Enigmatica 8 v2.3.2
+
+_Using Forge-1.18.2-40.1.80_ | _[Mod Updates](https://github.com/NillerMedDild/Enigmatica8/blob/master/changelogs/changelog_mods_2.3.2.md)_ | _[Modlist](https://github.com/NillerMedDild/Enigmatica8/blob/master/changelogs/modlist_2.3.2.md)_
+
+**Bug Fixes**
+
+-   Arc Furnace Recycling Recipes Broken [\#292](https://github.com/EnigmaticaModpacks/Enigmatica8/issues/292)
+-   Many ore duplication bugs [\#291](https://github.com/EnigmaticaModpacks/Enigmatica8/issues/291)
+-   Nether wart duplication [\#290](https://github.com/EnigmaticaModpacks/Enigmatica8/issues/290)
+-   Blaze rod duplication [\#289](https://github.com/EnigmaticaModpacks/Enigmatica8/issues/289)
+-   Certus Quartz Duplication Bug [\#288](https://github.com/EnigmaticaModpacks/Enigmatica8/issues/288)
+-   Copper duplication bug [\#283](https://github.com/EnigmaticaModpacks/Enigmatica8/issues/283)
+
+---
+
+### Enigmatica 8 v2.3.1
+
+_Using Forge-1.18.2-40.1.80_ | _[Mod Updates](https://github.com/NillerMedDild/Enigmatica8/blob/master/changelogs/changelog_mods_2.3.1.md)_ | _[Modlist](https://github.com/NillerMedDild/Enigmatica8/blob/master/changelogs/modlist_2.3.1.md)_
+
+**New Mods!**
+
+-   [Collective (Forge)](https://www.curseforge.com/minecraft/mc-mods/collective) (by [Serilum](https://www.curseforge.com/members/Serilum/projects))
+-   [Creative Wireless Transmitter](https://www.curseforge.com/minecraft/mc-mods/creative-wireless-transmitter) (by [Ultramegaaa](https://www.curseforge.com/members/Ultramegaaa/projects))
+-   [Modonomicon](https://www.curseforge.com/minecraft/mc-mods/modonomicon) (by [kli_kli](https://www.curseforge.com/members/kli_kli/projects))
+-   [Stack Refill (Forge)](https://www.curseforge.com/minecraft/mc-mods/stack-refill) (by [Serilum](https://www.curseforge.com/members/Serilum/projects))
+
+**Bug Fixes**
+
+-   Copper duplication bug [\#283](https://github.com/EnigmaticaModpacks/Enigmatica8/issues/283)
+-   Book of Natural Aura - Empty [\#280](https://github.com/EnigmaticaModpacks/Enigmatica8/issues/280)
+-   Immersive Engineering's Blast Furnace output of Slag broken \("Empty Tag: forge:slag"\) [\#278](https://github.com/EnigmaticaModpacks/Enigmatica8/issues/278)
+-   Guide book broken in new worlds [\#275](https://github.com/EnigmaticaModpacks/Enigmatica8/issues/275)
+-   CurseForge Distrubition has missing files / configs! [\#274](https://github.com/EnigmaticaModpacks/Enigmatica8/issues/274)
+
+---
+
+### Enigmatica 8 v2.3.0
+
+_Using Forge-1.18.2-40.1.80_ | _[Mod Updates](https://github.com/NillerMedDild/Enigmatica8/blob/master/changelogs/changelog_mods_2.3.0.md)_ | _[Modlist](https://github.com/NillerMedDild/Enigmatica8/blob/master/changelogs/modlist_2.3.0.md)_
+
+**New Mods!**
+
+-   [Almost Unified](https://www.curseforge.com/minecraft/mc-mods/almost-unified) (by [TeamAlmostReliable](https://www.curseforge.com/members/TeamAlmostReliable/projects))
+-   [Ars Creo](https://www.curseforge.com/minecraft/mc-mods/ars-creo) (by [baileyholl2](https://www.curseforge.com/members/baileyholl2/projects))
+-   [Comforts (Forge)](https://www.curseforge.com/minecraft/mc-mods/comforts) (by [TheIllusiveC4](https://www.curseforge.com/members/TheIllusiveC4/projects))
+-   [Gateways to Eternity](https://www.curseforge.com/minecraft/mc-mods/gateways-to-eterrnity) (by [Shadows_of_Fire](https://www.curseforge.com/members/Shadows_of_Fire/projects))
+-   [JAOPCA](https://www.curseforge.com/minecraft/mc-mods/jaopca) (by [TheLMiffy1111](https://www.curseforge.com/members/TheLMiffy1111/projects))
+-   [Refined Cooking](https://www.curseforge.com/minecraft/mc-mods/refined-cooking) (by [ItsSebastrn](https://www.curseforge.com/members/ItsSebastrn/projects))
+-   [XNet Gases](https://www.curseforge.com/minecraft/mc-mods/xnet-gases) (by [Terrails](https://www.curseforge.com/members/Terrails/projects))
+
+**Improvements/Changes**
+
+-   Remove 'Small/Light Modpack' Label [\#245](https://github.com/EnigmaticaModpacks/Enigmatica8/issues/245)
+-   Crushing Osmium in Thermal Pulveriser [\#216](https://github.com/EnigmaticaModpacks/Enigmatica8/issues/216)
+-   Silver is missing processing recipes in mekanism [\#194](https://github.com/EnigmaticaModpacks/Enigmatica8/issues/194)
+-   Hide Twilight Forest Uncrafting clutter. Fix errors in JEI Descriptions. [\#250](https://github.com/EnigmaticaModpacks/Enigmatica8/pull/250) ([MuteTiefling](https://github.com/MuteTiefling))
+-   add some notable contributors as potential spirit names in occultism [\#232](https://github.com/EnigmaticaModpacks/Enigmatica8/pull/232) ([atlgeek007](https://github.com/atlgeek007))
+
+**Bug Fixes**
+
+-   Please ensure Functional Storage 1.0.6+ is in the next update upstream has fixed a major performance issue [\#259](https://github.com/EnigmaticaModpacks/Enigmatica8/issues/259)
+-   "Infinite Iron" Chain Exploit [\#243](https://github.com/EnigmaticaModpacks/Enigmatica8/issues/243)
+-   CF .zip ships additional files, which can change few things. [\#240](https://github.com/EnigmaticaModpacks/Enigmatica8/issues/240)
+-   Cobble Gen Randomizer causes ores to generate from cobblegens [\#238](https://github.com/EnigmaticaModpacks/Enigmatica8/issues/238)
+-   \[bug\]: E8 Ore / Metal Unification issues [\#234](https://github.com/EnigmaticaModpacks/Enigmatica8/issues/234)
+
+---
+
+### Enigmatica 8 v2.2.1
+
+_Using Forge-1.18.2-40.1.73_ | _[Mod Updates](https://github.com/NillerMedDild/Enigmatica8/blob/master/changelogs/changelog_mods_2.2.1.md)_ | _[Modlist](https://github.com/NillerMedDild/Enigmatica8/blob/master/changelogs/modlist_2.2.1.md)_
+
+**New Mods!**
+
+-   [Tips](https://www.curseforge.com/minecraft/mc-mods/tips) (by [DarkhaxDev](https://www.curseforge.com/members/DarkhaxDev/projects))
+
+**Improvements/Changes**
+
+-   Tips! from Enigmatica 6 Port. [\#235](https://github.com/EnigmaticaModpacks/Enigmatica8/pull/235) ([Kanzaji](https://github.com/Kanzaji))
+-   add some notable contributors as potential spirit names in occultism [\#232](https://github.com/EnigmaticaModpacks/Enigmatica8/pull/232) ([atlgeek007](https://github.com/atlgeek007))
+-   Quest Rework Part 2 [\#229](https://github.com/EnigmaticaModpacks/Enigmatica8/pull/229) ([Kanzaji](https://github.com/Kanzaji))
+
+**Bug Fixes**
+
+-   IntegratedDynamics \(Mechanical\) Squeezer Recipes not showing in JEI [\#236](https://github.com/EnigmaticaModpacks/Enigmatica8/issues/236)
+-   Killing Shulker while bullet is in midair causing Null Pointer Exception while ticking entity [\#230](https://github.com/EnigmaticaModpacks/Enigmatica8/issues/230)
+-   Crash [\#224](https://github.com/EnigmaticaModpacks/Enigmatica8/issues/224)
+-   Possible race condition? java.lang.NullPointerException: Cannot invoke "net.creeperhost.ftbbackups.org.quartz.Scheduler.clear\(\)" because "net.creeperhost.ftbbackups.FTBBackups.scheduler" is null [\#214](https://github.com/EnigmaticaModpacks/Enigmatica8/issues/214)
+-   Akashic Tome Fix [\#228](https://github.com/EnigmaticaModpacks/Enigmatica8/pull/228) ([Kanzaji](https://github.com/Kanzaji))
+-   Fixed Quest Loot Boxes sometimes containing unintended Apotheosis loot [\#226](https://github.com/EnigmaticaModpacks/Enigmatica8/pull/226) ([Kanzaji](https://github.com/Kanzaji))
+
+---
+
+### Enigmatica 8 v2.2.0
+
+_Using Forge-1.18.2-40.1.73_ | _[Mod Updates](https://github.com/NillerMedDild/Enigmatica8/blob/master/changelogs/changelog_mods_2.2.0.md)_ | _[Modlist](https://github.com/NillerMedDild/Enigmatica8/blob/master/changelogs/modlist_2.2.0.md)_
+
+**New Mods!**
+
+-   [Advanced Peripherals](https://www.curseforge.com/minecraft/mc-mods/advanced-peripherals) (by [srrendi](https://www.curseforge.com/members/srrendi/projects))
+-   [Applied Mekanistics](https://www.curseforge.com/minecraft/mc-mods/applied-mekanistics) (by [ramidzkh](https://www.curseforge.com/members/ramidzkh/projects))
+-   [Connected Glass](https://www.curseforge.com/minecraft/mc-mods/connected-glass) (by [SuperMartijn642](https://www.curseforge.com/members/SuperMartijn642/projects))
+-   [Entangled](https://www.curseforge.com/minecraft/mc-mods/entangled) (by [SuperMartijn642](https://www.curseforge.com/members/SuperMartijn642/projects))
+-   [Plonk](https://www.curseforge.com/minecraft/mc-mods/plonk) (by [BlueAgent](https://www.curseforge.com/members/BlueAgent/projects))
+-   [Powah! (Rearchitected)](https://www.curseforge.com/minecraft/mc-mods/powah-rearchitected) (by [thetechnici4n](https://www.curseforge.com/members/thetechnici4n/projects))
+-   [Scannable](https://www.curseforge.com/minecraft/mc-mods/scannable) (by [Sangar\_](https://www.curseforge.com/members/Sangar_/projects))
+-   [Sophisticated Storage](https://www.curseforge.com/minecraft/mc-mods/sophisticated-storage) (by [P3pp3rF1y](https://www.curseforge.com/members/P3pp3rF1y/projects))
+-   [SuperMartijn642's Config Lib](https://www.curseforge.com/minecraft/mc-mods/supermartijn642s-config-lib) (by [SuperMartijn642](https://www.curseforge.com/members/SuperMartijn642/projects))
+-   [SuperMartijn642's Core Lib](https://www.curseforge.com/minecraft/mc-mods/supermartijn642s-core-lib) (by [SuperMartijn642](https://www.curseforge.com/members/SuperMartijn642/projects))
+-   [Tempad](https://www.curseforge.com/minecraft/mc-mods/tempad) (by [CodexAdrian](https://www.curseforge.com/members/CodexAdrian/projects))
+
+**Improvements/Changes**
+
+-   Add twilightforest:mazestone to break_blacklist from ars noveau [\#219](https://github.com/EnigmaticaModpacks/Enigmatica8/issues/219)
+-   Two Logs for 16 sticks [\#184](https://github.com/EnigmaticaModpacks/Enigmatica8/issues/184)
+-   Bug/Suggestion Sushi Go replaces some Kelp with Seaweed and Create has a belt recipe with dried Kelp. [\#69](https://github.com/EnigmaticaModpacks/Enigmatica8/issues/69)
+
+**Bug Fixes**
+
+-   Please blacklist the consumable books from Blue Sky for Akashictome \(it vanishes the book tome!\) [\#209](https://github.com/EnigmaticaModpacks/Enigmatica8/issues/209)
+-   FTB Ultimine Tag Issue [\#208](https://github.com/EnigmaticaModpacks/Enigmatica8/issues/208)
+-   Copper Block Duplication in E8 [\#204](https://github.com/EnigmaticaModpacks/Enigmatica8/issues/204)
+-   Missing Items [\#200](https://github.com/EnigmaticaModpacks/Enigmatica8/issues/200)
+-   IE Concrete & TS Slag Conflict [\#198](https://github.com/EnigmaticaModpacks/Enigmatica8/issues/198)
+-   Create gantry not working with Entity Culling [\#197](https://github.com/EnigmaticaModpacks/Enigmatica8/issues/197)
+-   game crash because of AIOT [\#196](https://github.com/EnigmaticaModpacks/Enigmatica8/issues/196)
+-   Bug: Occultism silver not generating and initial ritual does not accept other silver types. [\#187](https://github.com/EnigmaticaModpacks/Enigmatica8/issues/187)
+-   Tetra tools cannot excavate [\#182](https://github.com/EnigmaticaModpacks/Enigmatica8/issues/182)
+-   You can dupe DeepResonance Luiquid Crystal with use of Purifier [\#178](https://github.com/EnigmaticaModpacks/Enigmatica8/issues/178)
+-   3 tin version [\#176](https://github.com/EnigmaticaModpacks/Enigmatica8/issues/176)
+-   \[Missing Mod?\] Sophisticated Storage [\#175](https://github.com/EnigmaticaModpacks/Enigmatica8/issues/175)
+-   Fixed looting not being applicable for tetra swords [\#192](https://github.com/EnigmaticaModpacks/Enigmatica8/pull/192) ([mickelus](https://github.com/mickelus))
+-   Fix Loot Tables/boxes for Quests rewards [\#220](https://github.com/EnigmaticaModpacks/Enigmatica8/pull/220) ([Kanzaji](https://github.com/Kanzaji))
+-   Quest Rework. [\#211](https://github.com/EnigmaticaModpacks/Enigmatica8/pull/211) ([Kanzaji](https://github.com/Kanzaji))
+-   Adding Extra QoL recipes and Fix Inconsistency in Tags [\#206](https://github.com/EnigmaticaModpacks/Enigmatica8/pull/206) ([PopcraftReal](https://github.com/PopcraftReal))
+-   Screw it, make ftb ultimine not require a breakable item to work [\#189](https://github.com/EnigmaticaModpacks/Enigmatica8/pull/189) ([Gcat101](https://github.com/Gcat101))
+
+---
+
 ### Enigmatica 8 v2.1.0
 
 _Using Forge-1.18.2-40.1.68_ | _[Modlist](https://github.com/NillerMedDild/Enigmatica8/blob/master/changelogs/modlist_2.1.0.md)_

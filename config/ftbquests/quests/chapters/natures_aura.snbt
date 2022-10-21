@@ -61,10 +61,19 @@
 				""
 				"~MuteTiefling"
 			]
+			optional: true
 			id: "000000000000009F"
 			tasks: [{
-				id: "00000000000000A0"
-				type: "checkmark"
+				id: "5DCF7175B494CD02"
+				type: "item"
+				title: "Any Sapling"
+				item: {
+					id: "itemfilters:tag"
+					Count: 1b
+					tag: {
+						value: "minecraft:saplings"
+					}
+				}
 			}]
 			rewards: [{
 				id: "00000000000000A6"
@@ -99,14 +108,21 @@
 				item: "naturesaura:wood_stand"
 				count: 8L
 			}]
-			rewards: [{
-				id: "000000000000035A"
-				type: "command"
-				title: "Rare Nature's Aura Loot Box"
-				icon: "kubejs:rare_lootbox"
-				command: "/execute at @p run loot spawn ~ ~1 ~ loot enigmatica:chests/quest_natures_aura_loot_rare"
-				player_command: false
-			}]
+			rewards: [
+				{
+					id: "000000000000035A"
+					type: "command"
+					title: "Rare Nature's Aura Loot Box"
+					icon: "kubejs:rare_lootbox"
+					command: "/execute at @p run loot spawn ~ ~1 ~ loot enigmatica:loot_boxes/quest_natures_aura_loot_rare"
+					player_command: false
+				}
+				{
+					id: "14A7BCABC52C6E6D"
+					type: "item"
+					item: "farmingforblockheads:market"
+				}
+			]
 		}
 		{
 			x: -0.5d
@@ -126,7 +142,7 @@
 					type: "command"
 					title: "Rare Nature's Aura Loot Box"
 					icon: "kubejs:rare_lootbox"
-					command: "/execute at @p run loot spawn ~ ~1 ~ loot enigmatica:chests/quest_natures_aura_loot_rare"
+					command: "/execute at @p run loot spawn ~ ~1 ~ loot enigmatica:loot_boxes/quest_natures_aura_loot_rare"
 					player_command: false
 				}
 				{
@@ -134,7 +150,7 @@
 					type: "command"
 					title: "Scavenger's Delight"
 					icon: "kubejs:scavengers_delight"
-					command: "/execute at @p run loot spawn ~ ~1 ~ loot enigmatica:chests/quest_scavengers_delight"
+					command: "/execute at @p run loot spawn ~ ~1 ~ loot enigmatica:loot_boxes/quest_scavengers_delight"
 					player_command: false
 				}
 			]
@@ -161,7 +177,7 @@
 					type: "command"
 					title: "Rare Nature's Aura Loot Box"
 					icon: "kubejs:rare_lootbox"
-					command: "/execute at @p run loot spawn ~ ~1 ~ loot enigmatica:chests/quest_natures_aura_loot_rare"
+					command: "/execute at @p run loot spawn ~ ~1 ~ loot enigmatica:loot_boxes/quest_natures_aura_loot_rare"
 					player_command: false
 				}
 				{
@@ -169,7 +185,7 @@
 					type: "command"
 					title: "Farmer's Delight"
 					icon: "kubejs:farmers_delight"
-					command: "/execute at @p run loot spawn ~ ~1 ~ loot enigmatica:chests/quest_farmers_delight"
+					command: "/execute at @p run loot spawn ~ ~1 ~ loot enigmatica:loot_boxes/quest_farmers_delight"
 					player_command: false
 				}
 			]
@@ -192,7 +208,7 @@
 				type: "command"
 				title: "Rare Nature's Aura Loot Box"
 				icon: "kubejs:rare_lootbox"
-				command: "/execute at @p run loot spawn ~ ~1 ~ loot enigmatica:chests/quest_natures_aura_loot_rare"
+				command: "/execute at @p run loot spawn ~ ~1 ~ loot enigmatica:loot_boxes/quest_natures_aura_loot_rare"
 				player_command: false
 			}]
 		}
@@ -208,7 +224,7 @@
 				""
 				"Refer to the Book of Natural Aura's section on the Natural Altar and the Crimson Altar for a preview of the required structure."
 				""
-				"Note: Building Gadgets Patterns and Create Schematics are available in your Enigmatica 6 instance folder to assist with this multiblock."
+				"Note: Building Gadgets Patterns and Create Schematics are available in your Enigmatica 8 instance folder to assist with this multiblock."
 			]
 			dependencies: ["00000000000002BF"]
 			dependency_requirement: "all_started"
@@ -249,7 +265,7 @@
 				type: "command"
 				title: "Rare Nature's Aura Loot Box"
 				icon: "kubejs:rare_lootbox"
-				command: "/execute at @p run loot spawn ~ ~1 ~ loot enigmatica:chests/quest_natures_aura_loot_rare"
+				command: "/execute at @p run loot spawn ~ ~1 ~ loot enigmatica:loot_boxes/quest_natures_aura_loot_rare"
 				player_command: false
 			}]
 		}
@@ -294,7 +310,7 @@
 					type: "command"
 					title: "Rare Nature's Aura Loot Box"
 					icon: "kubejs:rare_lootbox"
-					command: "/execute at @p run loot spawn ~ ~1 ~ loot enigmatica:chests/quest_natures_aura_loot_rare"
+					command: "/execute at @p run loot spawn ~ ~1 ~ loot enigmatica:loot_boxes/quest_natures_aura_loot_rare"
 					player_command: false
 				}
 			]
@@ -316,7 +332,7 @@
 				type: "command"
 				title: "Rare Nature's Aura Loot Box"
 				icon: "kubejs:rare_lootbox"
-				command: "/execute at @p run loot spawn ~ ~1 ~ loot enigmatica:chests/quest_natures_aura_loot_rare"
+				command: "/execute at @p run loot spawn ~ ~1 ~ loot enigmatica:loot_boxes/quest_natures_aura_loot_rare"
 				player_command: false
 			}]
 		}
@@ -340,7 +356,7 @@
 				type: "command"
 				title: "Epic Nature's Aura Loot Box"
 				icon: "kubejs:epic_lootbox"
-				command: "/execute at @p run loot spawn ~ ~1 ~ loot enigmatica:chests/quest_natures_aura_loot_epic"
+				command: "/execute at @p run loot spawn ~ ~1 ~ loot enigmatica:loot_boxes/quest_natures_aura_loot_epic"
 				player_command: false
 			}]
 		}
@@ -361,7 +377,7 @@
 				type: "command"
 				title: "Rare Nature's Aura Loot Box"
 				icon: "kubejs:rare_lootbox"
-				command: "/execute at @p run loot spawn ~ ~1 ~ loot enigmatica:chests/quest_natures_aura_loot_rare"
+				command: "/execute at @p run loot spawn ~ ~1 ~ loot enigmatica:loot_boxes/quest_natures_aura_loot_rare"
 				player_command: false
 			}]
 		}
@@ -406,7 +422,7 @@
 					type: "command"
 					title: "Rare Nature's Aura Loot Box"
 					icon: "kubejs:rare_lootbox"
-					command: "/execute at @p run loot spawn ~ ~1 ~ loot enigmatica:chests/quest_natures_aura_loot_rare"
+					command: "/execute at @p run loot spawn ~ ~1 ~ loot enigmatica:loot_boxes/quest_natures_aura_loot_rare"
 					player_command: false
 				}
 			]
@@ -438,7 +454,7 @@
 					type: "command"
 					title: "Rare Nature's Aura Loot Box"
 					icon: "kubejs:rare_lootbox"
-					command: "/execute at @p run loot spawn ~ ~1 ~ loot enigmatica:chests/quest_natures_aura_loot_rare"
+					command: "/execute at @p run loot spawn ~ ~1 ~ loot enigmatica:loot_boxes/quest_natures_aura_loot_rare"
 					player_command: false
 				}
 				{
@@ -471,7 +487,7 @@
 				type: "command"
 				title: "Epic Nature's Aura Loot Box"
 				icon: "kubejs:epic_lootbox"
-				command: "/execute at @p run loot spawn ~ ~1 ~ loot enigmatica:chests/quest_natures_aura_loot_epic"
+				command: "/execute at @p run loot spawn ~ ~1 ~ loot enigmatica:loot_boxes/quest_natures_aura_loot_epic"
 				player_command: false
 			}]
 		}
@@ -520,7 +536,7 @@
 				type: "command"
 				title: "Epic Nature's Aura Loot Box"
 				icon: "kubejs:epic_lootbox"
-				command: "/execute at @p run loot spawn ~ ~1 ~ loot enigmatica:chests/quest_natures_aura_loot_epic"
+				command: "/execute at @p run loot spawn ~ ~1 ~ loot enigmatica:loot_boxes/quest_natures_aura_loot_epic"
 				player_command: false
 			}]
 		}
@@ -541,7 +557,7 @@
 				type: "command"
 				title: "Rare Nature's Aura Loot Box"
 				icon: "kubejs:rare_lootbox"
-				command: "/execute at @p run loot spawn ~ ~1 ~ loot enigmatica:chests/quest_natures_aura_loot_rare"
+				command: "/execute at @p run loot spawn ~ ~1 ~ loot enigmatica:loot_boxes/quest_natures_aura_loot_rare"
 				player_command: false
 			}]
 		}
@@ -566,7 +582,7 @@
 				type: "command"
 				title: "Rare Nature's Aura Loot Box"
 				icon: "kubejs:rare_lootbox"
-				command: "/execute at @p run loot spawn ~ ~1 ~ loot enigmatica:chests/quest_natures_aura_loot_rare"
+				command: "/execute at @p run loot spawn ~ ~1 ~ loot enigmatica:loot_boxes/quest_natures_aura_loot_rare"
 				player_command: false
 			}]
 		}
@@ -578,6 +594,8 @@
 				"A portable source of Aura that can be be put to good use with a variety of tools. "
 				""
 				"Refer to the Book of Natural Aura's section on Natural Tools for potential uses."
+				""
+				"Note: These may not fill completely when worn. To get a full charge, or to even automate filling them, they may be placed in a Natural Altar to their maximum capacity."
 			]
 			dependencies: ["00000000000002BD"]
 			id: "00000000000002CD"
@@ -626,7 +644,7 @@
 				type: "command"
 				title: "Epic Nature's Aura Loot Box"
 				icon: "kubejs:epic_lootbox"
-				command: "/execute at @p run loot spawn ~ ~1 ~ loot enigmatica:chests/quest_natures_aura_loot_epic"
+				command: "/execute at @p run loot spawn ~ ~1 ~ loot enigmatica:loot_boxes/quest_natures_aura_loot_epic"
 				player_command: false
 			}]
 		}
@@ -647,7 +665,7 @@
 				type: "command"
 				title: "Rare Nature's Aura Loot Box"
 				icon: "kubejs:rare_lootbox"
-				command: "/execute at @p run loot spawn ~ ~1 ~ loot enigmatica:chests/quest_natures_aura_loot_rare"
+				command: "/execute at @p run loot spawn ~ ~1 ~ loot enigmatica:loot_boxes/quest_natures_aura_loot_rare"
 				player_command: false
 			}]
 		}
@@ -659,6 +677,8 @@
 				"Higher capacity than the Aura Cache."
 				""
 				"Refer to the Book of Natural Aura's section on Natural Tools for potential uses."
+				""
+				"Note: These may not fill completely when worn. To get a full charge, or to even automate filling them, they may be placed in a Natural Altar to their maximum capacity."
 			]
 			dependencies: ["00000000000002E9"]
 			id: "00000000000002EE"
@@ -672,7 +692,7 @@
 				type: "command"
 				title: "Epic Nature's Aura Loot Box"
 				icon: "kubejs:epic_lootbox"
-				command: "/execute at @p run loot spawn ~ ~1 ~ loot enigmatica:chests/quest_natures_aura_loot_epic"
+				command: "/execute at @p run loot spawn ~ ~1 ~ loot enigmatica:loot_boxes/quest_natures_aura_loot_epic"
 				player_command: false
 			}]
 		}
@@ -702,7 +722,7 @@
 				type: "command"
 				title: "Epic Nature's Aura Loot Box"
 				icon: "kubejs:epic_lootbox"
-				command: "/execute at @p run loot spawn ~ ~1 ~ loot enigmatica:chests/quest_natures_aura_loot_epic"
+				command: "/execute at @p run loot spawn ~ ~1 ~ loot enigmatica:loot_boxes/quest_natures_aura_loot_epic"
 				player_command: false
 			}]
 		}
@@ -742,13 +762,10 @@
 				""
 				"Once built, simply throw down the reagents atop the altar. If there's enough Aura, the ritual will proceed automatically."
 				""
-				"Note: Building Gadget's Patterns and Create Schematics are available in your Enigmatica 6 instance folder to assist with this multiblock."
+				"Note: Building Gadget's Patterns and Create Schematics are available in your Enigmatica 8 instance folder to assist with this multiblock."
 			]
 			hide_dependency_lines: true
-			dependencies: [
-				"00000000000002B8"
-				"00000000000002E9"
-			]
+			dependencies: ["000000000000037F"]
 			id: "00000000000002FA"
 			tasks: [
 				{
@@ -794,7 +811,10 @@
 				"Refer to the Book of Natural Aura for specific instructions."
 			]
 			hide_dependency_lines: true
-			dependencies: ["00000000000002BD"]
+			dependencies: [
+				"00000000000002BD"
+				"000000000000009F"
+			]
 			id: "00000000000002FC"
 			tasks: [{
 				id: "00000000000002FD"
@@ -834,8 +854,9 @@
 			dependencies: [
 				"00000000000002E9"
 				"00000000000002EC"
+				"000000000000009F"
 			]
-			min_width: 450
+			min_width: 400
 			id: "00000000000002FE"
 			tasks: [{
 				id: "00000000000002FF"
@@ -848,7 +869,7 @@
 				type: "command"
 				title: "Rare Nature's Aura Loot Box"
 				icon: "kubejs:rare_lootbox"
-				command: "/execute at @p run loot spawn ~ ~1 ~ loot enigmatica:chests/quest_natures_aura_loot_rare"
+				command: "/execute at @p run loot spawn ~ ~1 ~ loot enigmatica:loot_boxes/quest_natures_aura_loot_rare"
 				player_command: false
 			}]
 		}
@@ -859,7 +880,11 @@
 			subtitle: "Forged in Hellfire"
 			description: ["Place atop a Blast Furnace to increase the yield of your ore processing."]
 			hide_dependency_lines: true
-			dependencies: ["00000000000002EB"]
+			dependencies: [
+				"00000000000002EB"
+				"000000000000009F"
+			]
+			min_width: 225
 			id: "0000000000000306"
 			tasks: [
 				{
@@ -878,7 +903,7 @@
 				type: "command"
 				title: "Rare Nature's Aura Loot Box"
 				icon: "kubejs:rare_lootbox"
-				command: "/execute at @p run loot spawn ~ ~1 ~ loot enigmatica:chests/quest_natures_aura_loot_rare"
+				command: "/execute at @p run loot spawn ~ ~1 ~ loot enigmatica:loot_boxes/quest_natures_aura_loot_rare"
 				player_command: false
 			}]
 		}
@@ -892,6 +917,7 @@
 				"00000000000002B9"
 				"00000000000002BD"
 				"000000000000032E"
+				"000000000000009F"
 			]
 			id: "0000000000000308"
 			tasks: [{
@@ -904,7 +930,7 @@
 				type: "command"
 				title: "Rare Nature's Aura Loot Box"
 				icon: "kubejs:rare_lootbox"
-				command: "/execute at @p run loot spawn ~ ~1 ~ loot enigmatica:chests/quest_natures_aura_loot_rare"
+				command: "/execute at @p run loot spawn ~ ~1 ~ loot enigmatica:loot_boxes/quest_natures_aura_loot_rare"
 				player_command: false
 			}]
 		}
@@ -915,10 +941,13 @@
 			description: [
 				"Ender Chests with a twist. Ender Crates can be assigned to a channel in an Anvil by simultaneously renaming them and combining them with an Eye of Ender."
 				""
-				"A small amount of Aura is used every time and items is moved in or out of the crate."
+				"A small amount of Aura is used every time items are moved in or out of the crate."
 			]
 			hide_dependency_lines: true
-			dependencies: ["0000000000000329"]
+			dependencies: [
+				"0000000000000329"
+				"000000000000009F"
+			]
 			id: "000000000000030A"
 			tasks: [{
 				id: "000000000000030B"
@@ -947,7 +976,10 @@
 			subtitle: "It Reaches Out Nothing Answers and It Reaches Out"
 			description: ["Collect items in a small area when placed upon an Adept Hopper. Filters in place on the hopper below it will be respected."]
 			hide_dependency_lines: true
-			dependencies: ["00000000000002BD"]
+			dependencies: [
+				"00000000000002BD"
+				"000000000000009F"
+			]
 			id: "000000000000030C"
 			tasks: [{
 				id: "000000000000030D"
@@ -955,10 +987,12 @@
 				item: "naturesaura:hopper_upgrade"
 			}]
 			rewards: [{
-				id: "0000000000000363"
-				type: "item"
-				title: "Portal Charm"
-				item: "darkutils:charm_portal"
+				id: "20911E51DB4A9D8A"
+				type: "command"
+				title: "Rare Nature's Aura Loot Box"
+				icon: "kubejs:rare_lootbox"
+				command: "/execute at @p run loot spawn ~ ~1 ~ loot enigmatica:loot_boxes/quest_natures_aura_loot_rare"
+				player_command: false
 			}]
 		}
 		{
@@ -971,7 +1005,10 @@
 				"Refer to the Book of Natural Aura for specifics."
 			]
 			hide_dependency_lines: true
-			dependencies: ["00000000000002BD"]
+			dependencies: [
+				"00000000000002BD"
+				"000000000000009F"
+			]
 			id: "000000000000030E"
 			tasks: [{
 				id: "000000000000030F"
@@ -999,6 +1036,7 @@
 			dependencies: [
 				"00000000000002CB"
 				"0000000000000329"
+				"000000000000009F"
 			]
 			id: "0000000000000310"
 			tasks: [{
@@ -1011,13 +1049,13 @@
 				type: "command"
 				title: "Rare Nature's Aura Loot Box"
 				icon: "kubejs:rare_lootbox"
-				command: "/execute at @p run loot spawn ~ ~1 ~ loot enigmatica:chests/quest_natures_aura_loot_rare"
+				command: "/execute at @p run loot spawn ~ ~1 ~ loot enigmatica:loot_boxes/quest_natures_aura_loot_rare"
 				player_command: false
 			}]
 		}
 		{
-			x: -2.5d
-			y: -14.5d
+			x: -2.0d
+			y: -15.5d
 			subtitle: "Better Than Sheep"
 			description: [
 				"This basic Aura generator devours flowers nearby to replenish the surrounding Aura. "
@@ -1036,13 +1074,13 @@
 				type: "command"
 				title: "Rare Nature's Aura Loot Box"
 				icon: "kubejs:rare_lootbox"
-				command: "/execute at @p run loot spawn ~ ~1 ~ loot enigmatica:chests/quest_natures_aura_loot_rare"
+				command: "/execute at @p run loot spawn ~ ~1 ~ loot enigmatica:loot_boxes/quest_natures_aura_loot_rare"
 				player_command: false
 			}]
 		}
 		{
-			x: -0.5d
-			y: -14.5d
+			x: -1.0d
+			y: -15.5d
 			subtitle: "Do. Or Do Not. There Is No Try."
 			description: ["This basic Aura generator devours the moss off of mossy stone variants to replenish Aura. The plain stone variant is left behind. "]
 			dependencies: ["00000000000002C1"]
@@ -1057,13 +1095,13 @@
 				type: "command"
 				title: "Rare Nature's Aura Loot Box"
 				icon: "kubejs:rare_lootbox"
-				command: "/execute at @p run loot spawn ~ ~1 ~ loot enigmatica:chests/quest_natures_aura_loot_rare"
+				command: "/execute at @p run loot spawn ~ ~1 ~ loot enigmatica:loot_boxes/quest_natures_aura_loot_rare"
 				player_command: false
 			}]
 		}
 		{
 			x: -2.5d
-			y: -13.5d
+			y: -14.5d
 			subtitle: "Judge Me By My Size, Do You?"
 			description: ["A slightly more advanced Aura generator that has the benefit of limiting the growth of trees to their smaller forms, making certain types of tree farm simpler to build. "]
 			dependencies: ["00000000000002C1"]
@@ -1078,15 +1116,15 @@
 				type: "command"
 				title: "Rare Nature's Aura Loot Box"
 				icon: "kubejs:rare_lootbox"
-				command: "/execute at @p run loot spawn ~ ~1 ~ loot enigmatica:chests/quest_natures_aura_loot_rare"
+				command: "/execute at @p run loot spawn ~ ~1 ~ loot enigmatica:loot_boxes/quest_natures_aura_loot_rare"
 				player_command: false
 			}]
 		}
 		{
 			title: "Esoteric Ecology"
 			icon: "naturesaura:chorus_generator"
-			x: -1.0d
-			y: -15.5d
+			x: -0.5d
+			y: -14.5d
 			description: ["Generating Aura doesn't stop here. Check the Book of Natural Aura for other more advanced options for keeping the Aura around you from depleting."]
 			dependencies: ["00000000000002C1"]
 			id: "000000000000031A"
@@ -1113,14 +1151,14 @@
 				""
 				"● Bountiful Core - Stone and Netherrack are converted to ore with the appropriate Aura type."
 				""
-				"● Steady Growth - Plants growth will no longer be boosted by Aura."
+				"● Steady Growth - The growth of crops, plants, and flowers will no longer be boosted by Aura."
 				""
 				"● Fertility - Passive Animals will breed when able."
 				""
 				"● No Storage - Your Aura Cache or Trove will not charge in the area."
 			]
 			hide_dependency_lines: true
-			dependencies: ["00000000000002C7"]
+			dependencies: ["00000000000002C2"]
 			id: "0000000000000339"
 			tasks: [
 				{
@@ -1191,7 +1229,7 @@
 					type: "command"
 					title: "Epic Nature's Aura Loot Box"
 					icon: "kubejs:epic_lootbox"
-					command: "/execute at @p run loot spawn ~ ~1 ~ loot enigmatica:chests/quest_natures_aura_loot_epic"
+					command: "/execute at @p run loot spawn ~ ~1 ~ loot enigmatica:loot_boxes/quest_natures_aura_loot_epic"
 					player_command: false
 				}
 			]

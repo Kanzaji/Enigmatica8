@@ -29,11 +29,11 @@ $MODPACK_NAME = "Enigmatica8"
 $CLIENT_NAME = "Enigmatica8"
 
 # Version Of The Modpack
-$MODPACK_VERSION = "2.1.0"
+$MODPACK_VERSION = "2.3.2"
 
 # Last Version Of The Modpack
 # Needed For Changelog Parsing
-$LAST_MODPACK_VERSION = "2.0.1"
+$LAST_MODPACK_VERSION = "2.3.1"
 
 # =====================================================================//
 #  CHANGELOG SETTINGS
@@ -66,10 +66,10 @@ $CLIENT_RELEASE_TYPE = "alpha"
 #=====================================================================//
 
 # File name of the latest https://github.com/TheRandomLabs/ChangelogGenerator/releases
-$CHANGELOG_GENERATOR_JAR = "ChangelogGenerator-2.0.0-pre10.jar"
+$CHANGELOG_GENERATOR_JAR = "ModListCreator-4.0.2-fatjar.jar"
 
 # File name of the latest https://github.com/MelanX/ModListCreator/releases
-$MODLIST_CREATOR_JAR = "ModListCreator-3.0.1-fatjar.jar"
+$MODLIST_CREATOR_JAR = "ModListCreator-4.0.2-fatjar.jar"
 
 #=====================================================================//
 #  CLIENT FILE SETTINGS
@@ -77,11 +77,14 @@ $MODLIST_CREATOR_JAR = "ModListCreator-3.0.1-fatjar.jar"
 
 $CLIENT_FILE_AUTHOR = "EnigmaticaModpacks"
 
-$FOLDERS_TO_INCLUDE_IN_CLIENT_FILES = @("config",
+$FOLDERS_TO_INCLUDE_IN_CLIENT_FILES = @("building_gadgets_patterns",
+	"config",
 	"defaultconfigs",
 	"kubejs",
 	"local",
-	"packmenu")
+	"packmenu",
+	"patchouli_books",
+	"schematics")
 
 $CONFIGS_TO_REMOVE_FROM_CLIENT_FILES = @(
 	"InventoryHUD/curios.json",
@@ -97,7 +100,6 @@ $CONFIGS_TO_REMOVE_FROM_CLIENT_FILES = @(
 	"betterendforge/client-config.toml",
 	"betterendforge/client.json",
 	"bloodmagic-client.toml",
-	"blue_skies-client.toml",
 	"cagedmobs-client.toml",
 	"cfm-client.toml",
 	"chiselsandbits-client.toml",
@@ -167,7 +169,10 @@ $CONFIGS_TO_REMOVE_FROM_CLIENT_FILES = @(
 	"upgrade_aquatic-client.toml",
 	"valhelsia_core-client.toml",
 	"xnet-client.toml",
-	"jei/jei-client.ini"
+	"jei/jei-client.ini",
+	"tempad_client.json",
+	"defaultoptions/servers.dat",
+	"defaultoptions/extra"
 )
 
 $FOLDERS_TO_REMOVE_FROM_CLIENT_FILES = @("local/ftbutilities", "local/ftbchunks/data", "local/ftbultimine", "local/ftbultimine-client.snbt", "resourcepacks")
@@ -194,7 +199,7 @@ $CONTENTS_TO_ZIP = @()
 
 # Toggle twitch-export-builder (automatic building of the manifest zip) on/off
 # Default: $true
-$ENABLE_CURSE_CLIENT_MODULE = $true
+$ENABLE_CLIENT_FILE_MODULE = $true
 
 # Toggle the modpack uploader on/off
 # Setting this to $false will also disable the Server File and Changelog Generator Modules.
@@ -205,11 +210,32 @@ $ENABLE_MODPACK_UPLOADER_MODULE = $true
 # Default: $true
 $ENABLE_SERVER_FILE_MODULE = $true
 
+# Toggle serverstarter compatibility on/off
+# This will update the "modpackUrl" in the file found at $SERVER_SETUP_CONFIG_PATH
+# to point to your newly created client files on the CurseForge CDN.
+# Default: $false
+$ENABLE_SERVERSTARTER_MODULE = $true
+
 # Toggle automatic changelog generator on/off
 # This module requires an older modpack manifest zip to be present, 
 # $LAST_MODPACK_VERSION must be set, and the manifest naming must be consistent.
 # Default: $false
 $ENABLE_CHANGELOG_GENERATOR_MODULE = $true
+# Path to the ChangelogGenerator's output file
+$CHANGELOG_PATH = "$INSTANCE_ROOT/changelogs/changelog_mods_$MODPACK_VERSION.md"
+
+# Toggle creation of a modlist file on/off
+# Default: $true
+$ENABLE_MODLIST_CREATOR_MODULE = $true
+# Path to the ModListCreator's output file
+$MODLIST_PATH = "$INSTANCE_ROOT/changelogs/modlist_$MODPACK_VERSION.md"
+
+
+# Toggle automatic changelog generator on/off
+# This module requires an older modpack manifest zip to be present, 
+# $LAST_MODPACK_VERSION must be set, and the manifest naming must be consistent.
+# Default: $false
+$ENABLE_GITHUB_RELEASE_MODULE = $true
 
 # Toggle creation of a modlist file on/off
 # Default: $true
